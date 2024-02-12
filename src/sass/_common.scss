@@ -7,6 +7,20 @@ body {
   flex-direction: column;
 }
 
-.footer {
-  margin-top: auto;
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ul li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
