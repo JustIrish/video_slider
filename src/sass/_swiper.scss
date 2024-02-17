@@ -1,0 +1,24 @@
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-top: 80px;
+}
+
+.gallery-image {
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  width: 45px;
+  height: 45px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: rgba(81, 78, 78, 0.42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
