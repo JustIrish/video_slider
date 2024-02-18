@@ -1,9 +1,9 @@
-import Swiper from 'swiper';
+// import Swiper from 'swiper';
 
 import { fetchVideo } from '../Api/fetchVideos';
 import { createSliderMarkup } from './createSliderMarkup';
 
-const swiper = new Swiper('.swiper', {
+const videoSlider = new Swiper('.video-slider', {
   slidesPerView: 4,
 
   navigation: {
@@ -13,6 +13,11 @@ const swiper = new Swiper('.swiper', {
 
   scrollbar: {
     el: '.swiper-scrollbar',
+  },
+
+  mousewheel: {
+    sensitivity: 1,
+    eventsTarget: '.video-slider',
   },
 });
 
