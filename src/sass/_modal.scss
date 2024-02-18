@@ -1,0 +1,55 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 250ms ease-in-out;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 999;
+  }
+}
+
+.swiper-in-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+
+  .icon {
+    fill: #fff;
+
+    transition: fill 250ms ease-in-out;
+
+    &:hover {
+      fill: #b0a9e6;
+    }
+  }
+}
