@@ -53,3 +53,12 @@ iframe {
     }
   }
 }
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #5f7071;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 1;
+}
