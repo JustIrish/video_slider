@@ -8,6 +8,7 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "@vimeo/player": "^2.21.0",
     "axios": "^1.6.7",
     "modern-normalize": "^1.1.0",
     "swiper": "^11.0.6",

@@ -1,6 +1,8 @@
-// import Swiper from 'swiper';
-
-import { fetchVideo } from '../Api/fetchVideos';
+import { fetchVideo } from './services/Api/fetchVideos';
+import {
+  loadFromLocalStorage,
+  saveToLocalStorage,
+} from './services/localStorage';
 import { createSliderMarkup } from './createSliderMarkup';
 import { onCloseModal } from './closeModal';
 
@@ -26,9 +28,15 @@ const videoSlider = new Swiper('.video-slider', {
 });
 
 async function onRenderSlider() {
-  const videos = await fetchVideo();
+  const savedData = loadFromLocalStorage('videos');
 
-  createSliderMarkup(videos.data);
+  if (!savedData) {
+    const videos = await fetchVideo();
+    saveToLocalStorage('videos', videos.data);
+    createSliderMarkup(videos.data);
+  } else {
+    createSliderMarkup(savedData);
+  }
 
   const galleryImage = document.querySelectorAll('.gallery-image');
 
