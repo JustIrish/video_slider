@@ -7,7 +7,7 @@ const token = 'd1835cbc6fd1dec3f1bc3f251b3825f8';
 export const fetchVideo = async function () {
   const params = {
     per_page: 8,
-    page: 2,
+    page: 1,
   };
   try {
     const response = await axios.get(BASE_URL, {

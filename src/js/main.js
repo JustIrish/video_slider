@@ -68,7 +68,7 @@ async function onRenderSlider() {
 
   galleryImage.forEach((image, index) => {
     image.addEventListener('click', () => {
-      modalSwiper.innerHTML = '';
+      // modalSwiper.innerHTML = '';
 
       galleryImage.forEach((image, i) => {
         const dataValue = image.dataset.uri.split('/');
