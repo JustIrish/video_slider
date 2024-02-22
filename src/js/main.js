@@ -11,9 +11,9 @@ const modalSwiper = document.querySelector('.swiper-in-modal-wrapper');
 const backdrop = document.querySelector('.js-backdrop');
 const btnCloseModal = document.querySelector('.js-close-modal');
 
-import Player from '@vimeo/player';
+import { Vimeo } from '@vimeo/player';
 
-const videoSlider = new Swiper('.video-slider', {
+new Swiper('.video-slider', {
   slidesPerView: 4,
 
   navigation: {
@@ -46,7 +46,7 @@ const modalSlider = new Swiper('.swiper-in-modal', {
         '.swiper-in-modal-wrapper .swiper-slide-active'
       );
       if (iframe) {
-        const player = new Player(iframe);
+        const player = new Vimeo.Player(iframe);
         player.play();
       }
     },
@@ -68,7 +68,7 @@ async function onRenderSlider() {
 
   galleryImage.forEach((image, index) => {
     image.addEventListener('click', () => {
-      // modalSwiper.innerHTML = '';
+      modalSwiper.innerHTML = '';
 
       galleryImage.forEach((image, i) => {
         const dataValue = image.dataset.uri.split('/');
