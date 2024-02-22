@@ -1,9 +1,15 @@
 {
   "name": "video_slider",
   "version": "1.0.0",
+  "description": "",
+  "homepage": "https://JustIrish.github.io/video_slider",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /video_slider/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
   },
   "keywords": [],
   "license": "ISC",
