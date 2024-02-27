@@ -13,8 +13,19 @@ const btnCloseModal = document.querySelector('.js-close-modal');
 
 import Player from '@vimeo/player';
 
-new Swiper('.swiper', {
-  slidesPerView: 4,
+const screenWidth = window.innerWidth;
+let slidesPerView = 4;
+
+if (screenWidth < 768) {
+  slidesPerView = 1;
+} else if (screenWidth >= 768 && screenWidth < 1024) {
+  slidesPerView = 2;
+} else {
+  slidesPerView = 4;
+}
+
+const slider = new Swiper('.swiper', {
+  slidesPerView: slidesPerView,
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -83,6 +94,8 @@ async function onRenderSlider() {
       modalSlider.slideTo(index);
 
       backdrop.classList.add('is-open');
+
+      modalSlider.update();
     });
   });
 }
